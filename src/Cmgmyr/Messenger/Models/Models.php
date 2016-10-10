@@ -2,8 +2,7 @@
 
 namespace Cmgmyr\Messenger\Models;
 
-//use App\User;
-use Douyasi\Models\User;
+use App\User;
 class Models
 {
     /**
