@@ -26,7 +26,7 @@ class Message extends Eloquent
      *
      * @var array
      */
-    protected $fillable = ['thread_id', 'user_id', 'body'];
+    protected $fillable = ['thread_id', 'user_id', 'body', 'attachment_id'];
 
     /**
      * Validation rules.
