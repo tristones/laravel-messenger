@@ -30,7 +30,7 @@ class Thread extends Eloquent
      *
      * @var array
      */
-    protected $dates = ['created_at', 'updated_at', 'deleted_at'];
+    protected $dates = ['created_at', 'updated_at','deleted_at','closed_at'];
 
     /**
      * {@inheritDoc}
@@ -60,6 +60,12 @@ class Thread extends Eloquent
     public function getLatestMessageAttribute()
     {
         return $this->messages()->latest()->first();
+    }
+
+    public function setClosed()
+    {
+       $this->closed_at = date('Y-m-d H:i:s');
+       $this->save(); 
     }
 
     /**
